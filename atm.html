@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="atm-menu" class="atm-container">
+        <h2>Welcome to ATM</h2>
+        <p id="balance">Balance: ₹5000</p>
+        <button onclick="showDepositScreen()">Deposit</button>
+        <button onclick="showWithdrawScreen()">Withdraw</button>
+        <button onclick="fetchMiniStatement()">Mini Statement</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Deposit Screen -->
+    <div id="deposit-screen" class="operation-container">
+        <h2>Deposit Money</h2>
+        <input type="number" id="deposit-amount" placeholder="Enter Amount">
+        <button onclick="depositMoney()">Deposit</button>
+        <button onclick="backToMenu()">Back</button>
+    </div>
+
+    <!-- Withdraw Screen -->
+    <div id="withdraw-screen" class="operation-container">
+        <h2>Withdraw Money</h2>
+        <input type="number" id="withdraw-amount" placeholder="Enter Amount">
+        <button onclick="withdrawMoney()">Withdraw</button>
+        <button onclick="backToMenu()">Back</button>
+    </div>
+
+    <!-- Mini Statement Screen -->
+    <div id="mini-statement-screen" class="operation-container">
+        <h2>Mini Statement</h2>
+        <p id="mini-statement">Your transactions will appear here...</p>
+        <button onclick="backToMenu()">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
